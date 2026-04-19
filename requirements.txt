@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pydantic
+pydantic-settings
+langchain
+langchain-openai
+langchain-community
+langchain-chroma
+langchain-huggingface
+langchain-ollama
+chromadb
+python-dotenv
+tiktoken
+pytest
+httpx
+sentence-transformers
