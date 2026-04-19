@@ -1,5 +1,0 @@
-Multi-agent workflows involve multiple specialized AI agents collaborating to achieve complex objectives. Instead of relying on a single monolith model to handle everything, tasks are distributed among agents based on their assigned personas and tools.
-
-For instance, in a software development workflow, one agent might act as a "Planner," breaking down user requirements. Another acts as a "Coder," generating Python scripts, while a third acts as a "Reviewer," evaluating the code against security best practices and returning feedback.
-
-Communication between these agents requires robust orchestration frameworks. Systems like Microsoft AutoGen and LangGraph provide mechanisms for agent communication, managing state, handling human-in-the-loop interventions, and ensuring that cyclic workflows eventually resolve into a final, polished output.
