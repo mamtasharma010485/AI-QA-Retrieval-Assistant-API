@@ -1,0 +1,5 @@
+Quality Assurance (QA) for systems built on Large Language Models requires fundamentally different approaches than traditional software testing. Because LLMs are non-deterministic, testing must shift from binary pass/fail assertions to probabilistic evaluations.
+
+Effective QA for an LLM system involves building a golden dataset of prompts and expected outputs. Teams measure the application against this dataset using LLM-as-a-judge techniques. They evaluate characteristics like toxicity, bias, hallucination rates, and adherence to system prompts.
+
+Continuous monitoring is also crucial. Once an LLM application is deployed, QA teams must track user interactions to identify edge cases or prompt injection attacks. Implementing guardrails—secondary models that check inputs and outputs for safety—is an essential QA practice to prevent the main system from generating harmful or off-brand content.

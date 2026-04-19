@@ -1,0 +1,5 @@
+Playwright, a modern testing library by Microsoft, offers cross-browser automation with powerful features like tracing and network interception. Integrating Large Language Models (LLMs) with Playwright takes browser automation to the next level by enabling intent-based interactions.
+
+Instead of writing granular click and type commands, developers can instruct an AI agent to "add the cheapest item to the cart and proceed to checkout." The AI uses Playwright's accessibility tree or DOM snapshots to understand the page structure, decides the necessary actions, and executes them consecutively.
+
+This reduces maintenance overhead. When the UI changes significantly, the AI dynamically adapts its execution path without requiring test modifications. Additionally, Playwright's visual comparison tools can be augmented with multimodal models to detect subtle UI layout regressions that pixel-matching algorithms often miss.

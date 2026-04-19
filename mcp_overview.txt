@@ -1,0 +1,5 @@
+The Model Context Protocol (MCP) is a standard proposed to streamline how AI assistants interact with external tools, APIs, and data sources. Currently, every platform implements custom tool-calling interfaces, creating a fragmented ecosystem.
+
+Model Context Protocol defines a consistent interface for exposing tools and context to AI assistants. It enables seamless integration across different platforms, making it easier for developers to build reusable plugins or connectors.
+
+By establishing a standard protocol, MCP reduces the friction of attaching an LLM to a local file system, a remote database, or third-party web services. This standard accelerates the development of advanced multi-agent applications and ensures deterministic and reliable interactions between the AI and external systems.

@@ -1,0 +1,5 @@
+An artificial intelligence (AI) agent is an autonomous system capable of perceiving its environment, making decisions, and taking actions to achieve specific goals. Unlike traditional software that strictly follows pre-programmed rules, AI agents leverage large language models (LLMs) to reason and adapt dynamically.
+
+Agents become more powerful when they can access structured tools and external context. Core components of an agent include memory, planning, and execution. Short-term memory allows the agent to recall the current conversation, while long-term memory depends on external vector databases.
+
+Planning involves breaking down complex user requests into manageable sub-tasks. Modern agents often use frameworks like LangChain or AutoGen to orchestrate these tasks and interact with external APIs, databases, or even physical systems.
