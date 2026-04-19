@@ -9,9 +9,13 @@ This project is a Production-Ready RAG (Retrieval-Augmented Generation) API Serv
 Traditional LLMs (like GPT-4) can sometimes "hallucinate" or provide outdated information. By using RAG, this API:
 
 ✅ Grounds Responses: The AI only answers using the specific documents you provide.
+
 ✅ Zero Hallucination: If the answer isn't in your files, it won't make one up.
+
 ✅ Privacy-First: Your documents stay on your local machine; only relevant snippets are sent to the LLM.
+
 ✅ Dynamic Knowledge: Simply drop new .txt files into the data/docs folder, re-ingest, and your AI is immediately smarter.
+
 This server is perfect for building Internal Q&A bots, Documentation assistants, or Knowledge Management systems.
 
 🧩 What is RAG? (Retrieval-Augmented Generation)
@@ -20,7 +24,9 @@ RAG is a technique that gives a Large Language Model (LLM) access to data it was
 
 🔍 Retrieval: When you ask a question, the system searches through your documents to find the most relevant "chunks" of text.
 🚀 Augmentation: The system augments your original question by merging it with the retrieved text chunks. This creates a single, context-rich prompt for the AI.
+
 🧠 Generation: The LLM receives this augmented prompt and generates a factual, grounded answer based only on the provided content.
+
 Think of it as giving the AI an open-book exam. Instead of relying on its memory, it looks up the answer in your provided notes and synthesizes a response.
 
 🏗️ Architecture Overview
@@ -28,14 +34,20 @@ Think of it as giving the AI an open-book exam. Instead of relying on its memory
 This application follows a modern RAG pipeline:
 
 📂 Document Loading: Reads text files from the local filesystem (data/docs/).
+
 ✂️ Chunking: Splits documents into manageable pieces using RecursiveCharacterTextSplitter.
+
 🔢 Embedding: Uses OpenAI's text-embedding-3-small to convert chunks into vectors.
+
 🗄️ Vector Store: Persistently saves vectors to local storage (./chroma_db) using ChromaDB.
+
 🔍 Retrieval: Leverages similarity search to find the most relevant document chunks based on user questions.
-🧠 Generation: Crafts a strict prompt to prevent hallucinations and generates answers using OpenAI's gpt-4o-mini.
+
+🧠 Generation: Crafts a strict prompt to prevent hallucinations and generates answers using llama 3.2 .
 📁 Project Structure
 
 RAGAPISERVER/
+
 ├── 📂 app/               # Application Source Code
 │   ├── ⚙️ config.py        # configuration & environment parsing
 │   ├── 📄 loader.py        # Reads & splits .txt documents
@@ -52,15 +64,19 @@ RAGAPISERVER/
 ├── 📄 .env.example       # 🔑 Environment variables template
 ├── 📄 requirements.txt   # 📦 Python dependencies
 └── 📄 README.md          # 📖 This file
+
 📋 Prerequisites
+
 Before you begin, ensure you have the following installed:
 
 🐍 Python 3.11+: Download here
-🔑 OpenAI API Key: Get your key here
+🔑 OpenAI API Key: Get your key here or ollama should be installed in your machine
 📮 Postman: For testing the API endpoints
 📁 Git: To clone/manage the repository (optional)
 🚀 Quick Setup Instructions
+
 1. 🐍 Create Virtual Environment
+2. 
 python -m venv venv
 # On Windows:
 venv\Scripts\activate
@@ -80,7 +96,9 @@ uvicorn app.main:app --reload
 The server will start at http://localhost:8000.
 
 🏠 API Base: http://localhost:8000
+
 📖 Swagger UI: http://localhost:8000/docs
+
 🕹️ Usage Workflow (Must Follow)
 The vector database starts empty. Follow these steps in order:
 
@@ -120,9 +138,13 @@ Go to "4. Ask Question" in Postman and use these JSON bodies:
 Topic	Question	Expected Content
 
 Agents	What is an AI Agent?	Reasoning, planning, memory, and tools.
+
 RAG	How does RAG reduce hallucination?	Grounding answers in retrieved context.
+
 MCP	What is Model Context Protocol?	Standardizing AI helper integrations.
+
 Metrics	Key LLM evaluation metrics?	Faithfulness, Relevance, Ragas.
+
 Testing	Cypress AI Testing?	Self-healing and intent-driven tests.
 
 ⚠️ Critical Startup Rules
@@ -140,10 +162,17 @@ documents: []	No ingestion done.	Run POST /ingest in Postman.
 500 Server Error	Missing API Key.	Check .env file for OPENAI_API_KEY.
 ModuleNotFoundError	Broken venv.	Re-run pip install -r requirements.txt.
 ✨ Features Included
+
 ✅ Full RAG Pipeline (Ingest -> Retrieve -> Generate)
+
 ✅ ChromaDB Persistence
+
 ✅ Metadata Filtering by topic
+
 ✅ Hallucination Protection system prompt
+
 ✅ Postman Ready with collections & scripts
+
 ✅ Automated Tests included
+
 Built with ❤️ for AI Engineers 🚀
