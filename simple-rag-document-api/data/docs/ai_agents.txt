@@ -1,0 +1,10 @@
+AI Agents are autonomous systems designed to perform specific tasks.
+Unlike traditional software, an agent can make decisions on how to achieve its goal.
+
+Common characteristics of AI Agents:
+1. Autonomy: Operates without constant human intervention.
+2. Perception: Can observe its environment (e.g., read files, browse the web).
+3. Tools: Uses tools like APIs, search engines, or code interpreters.
+
+AI Agents are often described as 'LLMs with hands.'
+Example: An agent that can research a topic and then write a summary for you automatically.

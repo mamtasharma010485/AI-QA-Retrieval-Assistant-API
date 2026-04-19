@@ -1,0 +1,9 @@
+Evaluating Large Language Models (LLMs) and RAG applications is critical to ensure quality and reliability. In RAG pipelines, evaluation typically spans two dimensions: retrieval accuracy and generation quality.
+
+Key metrics for generation include Faithfulness and Answer Relevance. Faithfulness measures whether the generated answer is entirely supported by the retrieved context. If an LLM hallucinates details not present in the chunks, the faithfulness score drops. Answer Relevance checks if the output directly addresses the user's original question without adding unnecessary fluff.
+
+Popular frameworks like Ragas or TruLens use LLMs-as-a-judge to automate this evaluation. They calculate scores dynamically, providing developers with actionable feedback on whether to tune their chunk size, switch their embedding model, or refine their prompts.
+
+Context Precision measures how relevant the retrieved documents are to the question.
+
+Context Recall measures whether all relevant information has been retrieved.

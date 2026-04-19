@@ -1,0 +1,15 @@
+Retrieval-Augmented Generation (RAG) is a technique for grounding AI answers.
+It solves the problem of 'hallucination' (AI making things up) and outdated training data.
+
+How RAG works in simple steps:
+1. Retrieval: When you ask a question, the system first 'retrieves' the most relevant snippets from your documents.
+2. Grounding: These snippets are added to your original question as 'context.'
+3. Generation: The LLM reads the context and your question, then generates an answer ONLY from that context.
+
+Think of it like an Open-Book Exam:
+Instead of the AI answering from memory (which can be wrong), it reads the book (your files) and finds the exact answer.
+
+Core components of RAG:
+- Vector Database: A place to store and search text based on meaning.
+- Embeddings: Mathematical representations of text meaning.
+- LLM: The brain that reads the retrieved context.
