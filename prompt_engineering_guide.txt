@@ -1,5 +1,0 @@
-Prompt engineering is the practice of designing and refining inputs to large language models to elicit optimal responses. A well-crafted prompt provides clear instructions, context, constraints, and format requirements.
-
-Techniques such as Few-Shot Prompting, where the model is given examples of desired outputs, can drastically improve task performance. Another crucial method is Chain-of-Thought (CoT) prompting, encouraging the model to explain its reasoning step-by-step before arriving at a final answer.
-
-In the context of RAG systems, the generation prompt is highly structured. It must instruct the LLM to strictly base its answer only on the provided context retrieved from the database. A solid prompt also explicitly tells the AI what to do if the context lacks the answer, such as returning a polite "I don't know" instead of fabricating facts.
