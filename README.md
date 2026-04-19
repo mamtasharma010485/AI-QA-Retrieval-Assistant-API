@@ -70,9 +70,13 @@ RAGAPISERVER/
 Before you begin, ensure you have the following installed:
 
 🐍 Python 3.11+: Download here
+
 🔑 OpenAI API Key: Get your key here or ollama should be installed in your machine
+
 📮 Postman: For testing the API endpoints
+
 📁 Git: To clone/manage the repository (optional)
+
 🚀 Quick Setup Instructions
 
 1. 🐍 Create Virtual Environment
@@ -112,27 +116,47 @@ The AI will answer based only on the ingested context.
 curl -X POST http://localhost:8000/ask \
 -H "Content-Type: application/json" \
 -d '{"question": "What is an AI Agent?", "top_k": 3}'
+
 📮 Postman Integration — Step-by-Step
+
 📥 Step 1 — Import the Collection
+
 Open Postman → Click the Import button.
+
 Select postman\rag_api_collection.json.
+
 ✅ You will see "RAG API Server" in the Collections sidebar.
+
 🌍 Step 2 — Import the Environment
+
 Click Import again → Select postman\rag_api_environment.json.
+
 ✅ The "RAG API Local" environment is now available.
+
 ⚡ Step 3 — Activate the Environment
+
 Top-right dropdown → Select "RAG API Local".
+
 ✅ This sets {{base_url}} = http://localhost:8000.
+
 🔄 Step 4 — Run the Requests in Order
+
 Execute the requests in this exact order:
 
 Order	Request Name	Method	Endpoint	Purpose
+
 1️⃣	Health Check	GET	/health	Check if API is alive
+
 2️⃣	Clear Store	POST	/reset	Wipe existing vector data
+
 3️⃣	Ingest Docs	POST	/ingest	🚀 Load knowledge base
+
 4️⃣	Ask AI	POST	/ask	Get grounded answers
+
 5️⃣	Retrieve	POST	/retrieve	Debug raw search results
+
 🎯 How to Test Each Demo Question in Postman
+
 Go to "4. Ask Question" in Postman and use these JSON bodies:
 
 Topic	Question	Expected Content
@@ -155,12 +179,19 @@ The vector store starts empty. If you don't ingest first, you'll get an "informa
 Uvicorn reload doesn't always catch new package installs. Ctrl+C and restart after pip install.
 
 🧪 Running Tests
+
 python -m pytest tests/test_api.py -v
+
 🐛 Troubleshooting
+
 Problem	Cause	Solution
+
 documents: []	No ingestion done.	Run POST /ingest in Postman.
+
 500 Server Error	Missing API Key.	Check .env file for OPENAI_API_KEY.
+
 ModuleNotFoundError	Broken venv.	Re-run pip install -r requirements.txt.
+
 ✨ Features Included
 
 ✅ Full RAG Pipeline (Ingest -> Retrieve -> Generate)
