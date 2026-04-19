@@ -47,8 +47,8 @@ This application follows a modern RAG pipeline:
 📁 Project Structure
 
 RAGAPISERVER/
+├── 📂 app/                # Application Source Code
 
-├── 📂 app/               # Application Source Code
 │   ├── ⚙️ config.py        # configuration & environment parsing
 │   ├── 📄 loader.py        # Reads & splits .txt documents
 │   ├── 🚀 ingest.py        # Orchestrates document embedding
