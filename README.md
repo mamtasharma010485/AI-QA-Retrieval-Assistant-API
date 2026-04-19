@@ -1,8 +1,11 @@
 🤖AI QA Retrieval Assistant API 🚀
+
 🌟 About This Project
+
 This project is a Production-Ready RAG (Retrieval-Augmented Generation) API Server designed to transform local documents into a searchable, interactive knowledge base.
 
 ✨ Why use this?
+
 Traditional LLMs (like GPT-4) can sometimes "hallucinate" or provide outdated information. By using RAG, this API:
 
 ✅ Grounds Responses: The AI only answers using the specific documents you provide.
@@ -12,6 +15,7 @@ Traditional LLMs (like GPT-4) can sometimes "hallucinate" or provide outdated in
 This server is perfect for building Internal Q&A bots, Documentation assistants, or Knowledge Management systems.
 
 🧩 What is RAG? (Retrieval-Augmented Generation)
+
 RAG is a technique that gives a Large Language Model (LLM) access to data it wasn't trained on. It works through three essential steps:
 
 🔍 Retrieval: When you ask a question, the system searches through your documents to find the most relevant "chunks" of text.
@@ -20,6 +24,7 @@ RAG is a technique that gives a Large Language Model (LLM) access to data it was
 Think of it as giving the AI an open-book exam. Instead of relying on its memory, it looks up the answer in your provided notes and synthesizes a response.
 
 🏗️ Architecture Overview
+
 This application follows a modern RAG pipeline:
 
 📂 Document Loading: Reads text files from the local filesystem (data/docs/).
@@ -29,6 +34,7 @@ This application follows a modern RAG pipeline:
 🔍 Retrieval: Leverages similarity search to find the most relevant document chunks based on user questions.
 🧠 Generation: Crafts a strict prompt to prevent hallucinations and generates answers using OpenAI's gpt-4o-mini.
 📁 Project Structure
+
 RAGAPISERVER/
 ├── 📂 app/               # Application Source Code
 │   ├── ⚙️ config.py        # configuration & environment parsing
@@ -112,11 +118,13 @@ Order	Request Name	Method	Endpoint	Purpose
 Go to "4. Ask Question" in Postman and use these JSON bodies:
 
 Topic	Question	Expected Content
+
 Agents	What is an AI Agent?	Reasoning, planning, memory, and tools.
 RAG	How does RAG reduce hallucination?	Grounding answers in retrieved context.
 MCP	What is Model Context Protocol?	Standardizing AI helper integrations.
 Metrics	Key LLM evaluation metrics?	Faithfulness, Relevance, Ragas.
 Testing	Cypress AI Testing?	Self-healing and intent-driven tests.
+
 ⚠️ Critical Startup Rules
 🛑 Rule 1 — Always Call /ingest Before /ask
 The vector store starts empty. If you don't ingest first, you'll get an "information not available" response.
